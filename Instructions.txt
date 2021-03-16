@@ -1,0 +1,9 @@
+#1 First make the HTML form
+
+#2 Now after making the HTML lets make a php function that trace if a button is clicked or the form is submitted by a user but first and foremost dont forget the session_start();
+
+#3 If a form has submitted , insert the data to the server and  pass it to the test.php file to send the form
+
+#4 Make a redirect for the confirmation that prompts the user that the form has submitted successfully
+
+#4 exit the php script 

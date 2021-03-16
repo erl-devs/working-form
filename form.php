@@ -4,14 +4,19 @@
 
     require_once('test.php');
 
+    /* If form is submitted or a user clicks submit button */
    if($_SERVER['REQUEST_METHOD']=='POST' || isset($_POST['submit'])){
-
+    
+    /* Send the form to the test.php function */
     sendMailTo($_REQUEST['name'] , $_REQUEST['email'], $_REQUEST['message'] , $_SERVER['REMOTE_ADDR']);
 
+    /* Then redirects for the confirmation and prompts the user that the form has been submitted */
     header("HTTP/1.1 303 See Other");
     header("Location: http://$_SERVER[HTTP_HOST]/testweb/confirmation.php");
 
+    /*exit the php script*/
     die();
+    
    } else{
        echo "Failed";
        session_unset();
